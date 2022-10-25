@@ -17,7 +17,7 @@ neuronalActionPotential code builds on top of the deal.II library.
 ```
 $ git clone https://github.com/cmmg/neuronalActionPotential.git
 $ cd neuronalActionPotential
-$ git checkout pnpPeriaxonal
+$ git checkout pnpMyelinated
 $ cmake .
 $ make -j nprocs
   ```
