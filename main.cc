@@ -1,8 +1,8 @@
 //
 //Computational Mechanics and Multiphysics Group @ UW-Madison
-//Basic framework for Finite Strain Elasticity
-//Created May 2018
-//authors: Rahul, Rudraa (2018)
+//Basic framework for modeling action potential propagation in neurons using the cable theory based Hodgkin-Huxley model.
+//Created May 2021
+//authors: Rahul Gulati (2021)
 //
 
 //deal.II headers
@@ -108,21 +108,11 @@ namespace elasticity1
     constraints_L2.close ();
     
     //Setup boundary conditions
-    if (dim >5){
-      std::vector<bool> uBCX0 (dim, true); 
-      VectorTools::interpolate_boundary_values (dof_handler, 0, ZeroFunction<dim>(dim), constraints, uBCX0);
-      VectorTools::interpolate_boundary_values (dof_handler, 0, ZeroFunction<dim>(dim), constraints2, uBCX0);
-      std::vector<bool> uBCX1 (dim, false); uBCX1[0]=true; 
-      VectorTools::interpolate_boundary_values (dof_handler, 1, ConstantFunction<dim>(problemWidth/50.0, dim), constraints, uBCX1);
-      VectorTools::interpolate_boundary_values (dof_handler, 1, ZeroFunction<dim>(dim), constraints2, uBCX1);
-    }
-    else {
       std::vector<bool> uBCX0 (DIMS, false); uBCX0[0]=true; 
       VectorTools::interpolate_boundary_values (dof_handler, 0, ConstantFunction<dim>(VBoundary, DIMS), constraints, uBCX0);
       VectorTools::interpolate_boundary_values (dof_handler, 0, ZeroFunction<dim>(DIMS), constraints3, uBCX0);
       //VectorTools::interpolate_boundary_values (dof_handler, 1, ZeroFunction<dim>(dim), constraints);
       //VectorTools::interpolate_boundary_values (dof_handler, 1, ZeroFunction<dim>(dim), constraints2);
-    }
     constraints.close ();
     constraints2.close ();
     constraints3.close ();
