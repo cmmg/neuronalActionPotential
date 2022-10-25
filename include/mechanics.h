@@ -1,7 +1,7 @@
 //
 //Computational Mechanics and Multiphysics Group @ UW-Madison
-//Created 2011
-//authors: Rahul, Rudraa (2011, 2018)
+//Created 2021
+//authors: Rahul Gulati (2021)
 //
 #ifndef MECHANICS_H_
 #define MECHANICS_H_
