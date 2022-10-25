@@ -2,7 +2,7 @@
 
 ### About
 
-neuronalActionPotential is a C++ code for modeling spatio-temporal saltatory conduction and the action potential propagation along the neuronal axon of a rat. The branch pnpPeriaxonal models the electro-diffusive PNP considering the presence of the myelin sheath and the submyelin peri-axonal space. 
+neuronalActionPotential is a C++ code for modeling the action potential propagation along the neuronal axon. The branch pnpPeriaxonal models the electro-diffusive PNP considering the presence of the myelin sheath and the submyelin peri-axonal space in a rat axon. 
 
 This framework for modeling spatio-temporal ionic charge distribution and the resulting voltage evolution using high-fidelity partial differential equations (PDE) modeling coupled electrostatics and electrochemistry can be capable of faithfully representing spatio-temporally heterogenous evolution of the ionic and voltage distributions leading to generation, propagation and potentially disruption of the neuronal action potential. The primal fields that are solved for are the voltage and the concentration of sodium/ potassium/ chloride ions. This spatio-temporal model is applied to numerically estimate the conduction velocity in a rat axon. The salient features of the computational implementation are: adaptive mesh refinement near the nodes of Ranvier, adaptive time-stepping schemes, support for parallel direct and iterative (Krylov-subspace) solvers with Jacobi/SOR preconditioning.
 
