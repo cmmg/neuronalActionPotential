@@ -23,7 +23,7 @@
 
 //time step controls
 #define DT 0.01                                   //timestep in milli-seconds
-#define Total_time 20.0                           //timestep in milli-seconds
+#define Total_time 20.0                           //total time in milli-seconds
 
 //output controls
 #define outputFileName "solution"
